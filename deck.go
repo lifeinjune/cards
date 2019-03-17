@@ -33,3 +33,8 @@ func (d deck) print() { //function with receiver
 		fmt.Println(i, card) //print out index and card
 	}
 }
+
+func deal(d deck, handSize int) (deck, deck) { // deal function argument receive deck and int
+	//(deck, deck) return two variables
+	return d[:handSize], d[handSize:] //splite deck by using range
+}

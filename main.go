@@ -22,7 +22,11 @@ func main() {
 	//fmt.Println(i, card) //print index and element
 	// both index and card must be used
 	//}
-	cards.print() //calling function from deck.go
+	cards.print()                         //calling function from deck.go
+	hand, remainingDeck := deal(cards, 5) // because deal will returns two variables
+	// first deck will be record on hand and another one to remaingdeck
+	hand.print()
+	remainingDeck.print()
 
 }
 
