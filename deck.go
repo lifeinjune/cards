@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -51,7 +52,26 @@ func (d deck) toString() string { //function to convert deck to string
 	// returns deck as one string
 }
 
-func (d deck) saveToFile(filename string) error {
+func (d deck) saveToFile(filename string) error { // receiver function to save the deck as string
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
+	// Use standard package call WriteFile to save the deck as file
+	// if error comes up it will return the error
+	// 0666 standard permission that everyone can read and write the file
+	// receive the filename argument as string which is name of the file
+	//[]byte to convert string to the slice of bytes
+}
 
+func newDeckFromFile(filename string) deck {
+	bs, err := ioutil.ReadFile(filename) //ReadFile will return byte slice and error
+	if err != nil {                      // if there is error err will be not nil
+		// log the error and call newDeck() Op1
+		// log error and quit program Op2
+		fmt.Println("Error!", err) //print out the error message
+		os.Exit(1)                 //program quit function when return other then 0
+		//function from os package that can be work well on any other platforms
+	}
+	ss := strings.Split(string(bs), ",")
+	//strings.Split function split the one string and convert into
+	//slice of strings and put into ss slice
+	return deck(ss) //slice of string convert into deck and return
 }

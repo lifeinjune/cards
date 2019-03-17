@@ -4,7 +4,7 @@ func main() {
 	//Go use Static types for variable so need to declare type of variable
 	//and only contain that type of variable in
 	//var card string = "Ace of Spades" (this is longer form)
-	cards := newDeck() //slice declaration
+	cards := newDeckFromFile("My_Cards") //import deck from file
 	//cards = append(cards, "Six of spades") //add element in slice at the back of the slice
 	//append returns new slice not modify slice
 	//make the compiler to figure out what type is variable by value of it
@@ -22,12 +22,13 @@ func main() {
 	//fmt.Println(i, card) //print index and element
 	// both index and card must be used
 	//}
-	cards.print()                         //calling function from deck.go
-	hand, remainingDeck := deal(cards, 5) // because deal will returns two variables
+	//cards.print()                         //calling function from deck.go
+	//hand, remainingDeck := deal(cards, 5) // because deal will returns two variables
 	// first deck will be record on hand and another one to remaingdeck
-	hand.print()
-	remainingDeck.print()
-	cards.saveToFile("My_Cards")
+	//hand.print()                 //test for the function
+	//remainingDeck.print()        //test for the function
+	//cards.saveToFile("My_Cards") //test for the function
+	cards.print()
 
 }
 
