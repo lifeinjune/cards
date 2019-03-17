@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 //new type call 'deck' created
 type deck []string //deck is slice of strings
@@ -19,7 +22,7 @@ func newDeck() deck { // function for handout new deck
 		}
 	}
 	return cards //returns cards slice with new cards
-
+	//_,suit on the loop, _ means that ignore the value return becuas it is not going to be use
 }
 
 func (d deck) print() { //function with receiver
@@ -37,4 +40,8 @@ func (d deck) print() { //function with receiver
 func deal(d deck, handSize int) (deck, deck) { // deal function argument receive deck and int
 	//(deck, deck) return two variables
 	return d[:handSize], d[handSize:] //splite deck by using range
+}
+
+func (d deck) toString() string { //function to convert deck to string
+	return strings.Join([]string(d), ",")
 }

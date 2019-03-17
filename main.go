@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//Go use Static types for variable so need to declare type of variable
 	//and only contain that type of variable in
@@ -27,6 +29,7 @@ func main() {
 	// first deck will be record on hand and another one to remaingdeck
 	hand.print()
 	remainingDeck.print()
+	fmt.Println(cards.toString())
 
 }
 
