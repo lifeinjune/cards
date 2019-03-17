@@ -1,0 +1,6 @@
+-slice start from 0
+-deck[0] : first element of slice
+-deck[0:2]: element from 0 to 1 (element 2 IS NOT include)
+-can leave either side of : to from start to or end to
+- deck[:2]: from 0 to 1
+-deck[2:]:from 2 to end
