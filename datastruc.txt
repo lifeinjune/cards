@@ -1,0 +1,6 @@
+Go has two data structure for list of records
+* Arrary and Slice
+Array: basic data structure, Fixed length array
+Slice: more featured Array, variable lenght array
+Array define with datatype
+

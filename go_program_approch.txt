@@ -1,0 +1,12 @@
+-how to approach this project like OO program
+-Go IS NOT object oriented language
+-I can use extend of the base type like 'string' to give extra
+functionality which act like class in oo programming
+-Extend base type has it's own name but act just like base type 
+-Syntex is 'type (name of extended type) (exist base type)'
+-function associated with extended type is functions with receiver
+which act like method inside instance of class
+-program structure going to be 
+    * main.go (which is already exist)
+    * deck.go (code about deck and how it work)
+    * deck_test.go (test file to automatically test the deck)
