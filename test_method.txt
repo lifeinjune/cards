@@ -1,0 +1,12 @@
+Decide what to test on program
+- what do i care about on the function
+
+for example:
+1. newDeck function will have 52 elements inside in deck slice (length of slice)
+2. first card of deck is ace of spade
+3. last card of deck is k of clubs
+
+When testing a function
+1. create function on test file with new infront of name of the function 
+test
+2. add statement that check things about the function
