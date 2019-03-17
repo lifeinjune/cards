@@ -4,7 +4,7 @@ func main() {
 	//Go use Static types for variable so need to declare type of variable
 	//and only contain that type of variable in
 	//var card string = "Ace of Spades" (this is longer form)
-	cards := newDeckFromFile("My_Cards") //import deck from file
+	cards := newDeck() //import deck from file
 	//cards = append(cards, "Six of spades") //add element in slice at the back of the slice
 	//append returns new slice not modify slice
 	//make the compiler to figure out what type is variable by value of it
@@ -28,6 +28,7 @@ func main() {
 	//hand.print()                 //test for the function
 	//remainingDeck.print()        //test for the function
 	//cards.saveToFile("My_Cards") //test for the function
+	cards.shuffle()
 	cards.print()
 
 }
