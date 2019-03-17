@@ -4,8 +4,8 @@ func main() {
 	//Go use Static types for variable so need to declare type of variable
 	//and only contain that type of variable in
 	//var card string = "Ace of Spades" (this is longer form)
-	cards := deck{"Ace of Diamonds", newCard()} //slice declaration
-	cards = append(cards, "Six of spades")      //add element in slice at the back of the slice
+	cards := newDeck() //slice declaration
+	//cards = append(cards, "Six of spades") //add element in slice at the back of the slice
 	//append returns new slice not modify slice
 	//make the compiler to figure out what type is variable by value of it
 	// := used only for new variable not reassign value of variable
@@ -26,9 +26,9 @@ func main() {
 
 }
 
-func newCard() string { //after the () with space define return data type
+/*func newCard() string { //after the () with space define return data type
 	return "five of diamonds"
-}
+}*/
 
 //functions can be called in different file but same package without
 //import statement
